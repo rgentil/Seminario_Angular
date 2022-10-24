@@ -18,8 +18,10 @@ export class BikeDataService {
     observable. tap toca lo que viene para transformarlo y despues lo envia. */
     return this.http.get<Bike[]>(URL)
       .pipe(
-        tap ( (bikes: Bike[]) => bikes.forEach(bike => bike.quantity = 0)
-        )
+        tap ( (bikes: Bike[]) => bikes.forEach(bike => { bike.quantity = 0 })
+        )/*,
+        tap ( (bikes: Bike[]) => bikes.forEach(bike => { bike.image = 'assets/img/s-epic-pro.webp' })
+        )*/
       );
   }
 

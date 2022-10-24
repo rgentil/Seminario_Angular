@@ -20,7 +20,7 @@
             <td>{{bike.price | currency}}</td>
             <td>
                 <span class="badge badge-warning" *ngIf="bike.stock == 0">Sin stock</span>
-                <span class="badge badge-success" *ngIf="bike.stock != 0">{{bike.stock}}</span>                
+                <span class="badge badge-success" *ngIf="bike.stock != 0">{{bike.stock}}</span>
             </td>
             <td>
                 <app-input-integer 
@@ -31,8 +31,8 @@
                 </app-input-integer>
             </td>
             <td>
-                <button class="btn btn-primary" (click)="addToCart(bike)">Add</button>
-            </td> 
+                <button class="btn btn-primary" *ngIf="bike.stock != 0" (click)="addToCart(bike)">Add</button>
+            </td>
         </tr>
     </tbody>
 </table>

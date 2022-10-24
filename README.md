@@ -18,9 +18,10 @@ TUDAI - Seminario de Introducción a Angular 2022.
 
 ## Codigo y ejecución ⚙️
 
-* [Stackblitz](https://stackblitz.com/edit/angular-ivy-f5swq2)
+* [Stackblitz](https://stackblitz.com/edit/angular-ivy-zrwi9b)
 * [GitHub](https://github.com/rgentil/Seminario_Angular)
 
 ## API test
 
-* [Mockapi](https://60be7ff7d03b43001792c8ed.mockapi.io/api/servicios)
+* [Mockapi](https://mockapi.io/)
+* [API](https://60be7ff7d03b43001792c8ed.mockapi.io/api/servicios)
