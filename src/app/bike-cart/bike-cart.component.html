@@ -1,0 +1,16 @@
+<h1>Cart Shop</h1>
+<ul>
+    <li *ngFor="let bike of cartList$ | async">
+        <!--pippe del observable-->
+        <div>
+            <span>{{bike.maker | uppercase}}</span>
+        </div>
+        <div>
+            <span>{{bike.model}} - {{bike.price | currency}}</span>
+            <span>Quantity: {{bike.quantity}}</span>
+        </div>
+        <div>
+            <span>Sub Total: {{bike.price * bike.quantity | currency}}</span>
+        </div>
+    </li>
+</ul>

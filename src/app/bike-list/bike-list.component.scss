@@ -1,0 +1,19 @@
+h1 {
+    color: rgb(44, 23, 231);
+}
+
+.clearance {
+    border: 2px solid rgb(0, 23, 128);
+    background: rgb(209, 221, 248);
+}
+
+/*.clearance::after {
+    content: 'Oferta!!!';
+    border: 2px solid rgb(0, 23, 128);
+    background: rgb(209, 221, 248);
+}*/
+
+td {
+    vertical-align: middle;
+    font-size: small;
+}

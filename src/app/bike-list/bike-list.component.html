@@ -1,0 +1,38 @@
+<h1>Bike List</h1>
+
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Maker</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Buy</th>
+            <th>Add Cart</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let bike of bikes" [ngClass]="{'clearance':bike.clearance}" class="clearance">
+            <td> <img width="100" [src]="bike.image" [alt]="bike.model"> </td>
+            <td>{{bike.maker | uppercase }}</td>
+            <td>{{bike.model}}</td>
+            <td>{{bike.price | currency}}</td>
+            <td>
+                <span class="badge badge-warning" *ngIf="bike.stock == 0">Sin stock</span>
+                <span class="badge badge-success" *ngIf="bike.stock != 0">{{bike.stock}}</span>                
+            </td>
+            <td>
+                <app-input-integer 
+                    [(quantity)]="bike.quantity" 
+                    [max]="bike.stock" 
+                    *ngIf="bike.stock != 0"
+                    (maxReached)="maxReached($event)">
+                </app-input-integer>
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="addToCart(bike)">Add</button>
+            </td> 
+        </tr>
+    </tbody>
+</table>
